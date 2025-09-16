@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Physics">
+      <UniqueIdentifier>{fe88ce53-312a-4b91-a84f-63a1294c7377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Geometry">
+      <UniqueIdentifier>{20c74fe2-c8fd-4d9a-9956-019184b039bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Rendering">
+      <UniqueIdentifier>{d4332771-536d-4377-8a0e-1360ca8ceb8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Physics\ApplicationPoints">
+      <UniqueIdentifier>{6c4a49a7-f459-4086-aba9-93a9683275a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Engine">
+      <UniqueIdentifier>{e2c72eb3-f011-4b51-935b-555e4771c9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Coordinators">
+      <UniqueIdentifier>{88abf74a-1ba1-4b65-ae5e-aca534b15638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Debug">
+      <UniqueIdentifier>{6f9ba2b3-1b31-4cf7-88cb-a1430adfd8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Engine\GameObject">
+      <UniqueIdentifier>{d6a13b57-ee5c-4eda-b32c-819751117311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Geometry">
+      <UniqueIdentifier>{d38cabc1-9176-420d-a9f5-bafa0f25871a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Physics">
+      <UniqueIdentifier>{6112b1c9-f74f-43fe-a11b-a7c9eac82a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Rendering">
+      <UniqueIdentifier>{436f2a9f-3374-409c-a0aa-c0de9cdf4cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Engine">
+      <UniqueIdentifier>{f922bf6e-f445-4af4-9beb-c4ed75e5fe2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Debug">
+      <UniqueIdentifier>{c2f95f8a-0ce7-4dc9-b30f-7238f710454e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Physics\ApplicationPoints">
+      <UniqueIdentifier>{541d8948-de19-4565-8081-83c8b520f4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Engine\GameObject">
+      <UniqueIdentifier>{16490872-70d8-4e98-823e-d8e68f2ecc54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Shaders">
+      <UniqueIdentifier>{55db8f79-19ae-4924-92a3-59a8f73c558f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Archivos de origen\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloth.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugTools.cpp">
+      <Filter>Archivos de origen\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="EBO.cpp">
+      <Filter>Archivos de origen\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Archivos de origen\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySamples.cpp">
+      <Filter>Archivos de origen\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Archivos de origen\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Archivos de origen\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsDebugTools.cpp">
+      <Filter>Archivos de origen\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsSystem.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBodyPoint.cpp">
+      <Filter>Archivos de origen\Physics\ApplicationPoints</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBodySamples.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders.cpp">
+      <Filter>Archivos de origen\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Archivos de origen\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleGeometry.cpp">
+      <Filter>Archivos de origen\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Spring.cpp">
+      <Filter>Archivos de origen\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="VAO.cpp">
+      <Filter>Archivos de origen\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="VBO.cpp">
+      <Filter>Archivos de origen\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApplicationPoint.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCloth.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectExamples.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectSamples.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameParticle.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRigidBody.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSpring.cpp">
+      <Filter>Archivos de origen\Engine\GameObject</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApplicationPoint.h">
+      <Filter>Archivos de encabezado\Physics\ApplicationPoints</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationPointCoordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloth.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ClothCoordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="Colors.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Coordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugTools.h">
+      <Filter>Archivos de encabezado\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="EBO.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Archivos de encabezado\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCursor.h">
+      <Filter>Archivos de encabezado\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSelection.h">
+      <Filter>Archivos de encabezado\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry3D.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySamples.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleCoordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsObject.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsSystem.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBodyCoordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBodyPoint.h">
+      <Filter>Archivos de encabezado\Physics\ApplicationPoints</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBodySamples.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Spring.h">
+      <Filter>Archivos de encabezado\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="VBO.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="VAO.h">
+      <Filter>Archivos de encabezado\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleGeometry.h">
+      <Filter>Archivos de encabezado\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="SpringCoordinator.h">
+      <Filter>Archivos de encabezado\Coordinators</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApplicationPoint.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCloth.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectExamples.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectSamples.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameParticle.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRigidBody.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSpring.h">
+      <Filter>Archivos de encabezado\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsDebugTools.h">
+      <Filter>Archivos de encabezado\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="GMV_Physics.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="GMV_Samples.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="debug.frag">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+    <None Include="debug.vert">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+    <None Include="projection.frag">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+    <None Include="projection.vert">
+      <Filter>Archivos de recursos\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -9,6 +9,7 @@ MOVIMIENTO:
 - D: ir hacia la derecha
 - Espacio: subir
 - Ctrl: bajar
+- Cambiar orientación cámara / Mostrar cursor: E
 
 CURSOR:
 - click izqdo: mover en plano xy

@@ -113,7 +113,6 @@ int main()
 	// ############ ENGINE SETUP ############
 
 	Engine engine;
-	Scene& scene = engine.scene;
 	Cursor cursor(engine, camera, window);
 
 
@@ -148,10 +147,11 @@ int main()
 	// T-HANDLE
 
 	GameRigidBody tHandle = CreateTHandleExample();
+	tHandle->SetPosition(glm::vec3(-2.f, 3.f, 0.f));
 	engine.AddObject(&tHandle);
 	RigidBody* tHandlePhysics = tHandle.GetPhysics();
-	GameApplicationPoint tHandlePoint(tHandle, tHandle.GetModels()[1]->position + glm::vec3(0.5f, 0.f, 0.f), 0.1f);
-	engine.AddObject(&tHandlePoint);
+	//GameApplicationPoint tHandlePoint(tHandle, tHandle.GetModels()[1]->position + glm::vec3(0.5f, 0.f, 0.f), 0.1f);
+	//engine.AddObject(&tHandlePoint);
 
 
 
@@ -160,7 +160,7 @@ int main()
 	glm::vec3 mobilePhoneSize = glm::vec3(3.f, 0.2f, 1.5f);
 	GameRigidBody mobilePhone = CreateGameBox(10.f, mobilePhoneSize);
 	engine.AddObject(&mobilePhone);
-	mobilePhone->SetPosition(glm::vec3(0.f, 8.f, 0.f));
+	mobilePhone->SetPosition(glm::vec3(0.f, 5.f, 0.f));
 	mobilePhone->SetDamping(5.f);
 	mobilePhone->SetAngularDamping(1.f);
 	mobilePhone.SetColor(GREEN);
@@ -189,6 +189,7 @@ int main()
 	engine.AddObject(&cloth);
 	cloth->GetParticle(0, clothSize - 1).fixed = true;
 	cloth->GetParticle(clothSize - 1, clothSize - 1).fixed = true;	
+	cloth->SetPosition(glm::vec3(5.f, 0.f, 0.f));
 
 	GameRigidBody boxInCloth = CreateGameBox(100, glm::vec3(1.f));
 	boxInCloth->SetPosition(cloth->GetParticle(clothSize - 1, 0).GetPosition() - glm::vec3(0.5f));
@@ -223,8 +224,8 @@ int main()
 	GameParticle particle1(particleRadius, 1.f);
 	GameParticle particle2(particleRadius, 1.f);
 
-	particle1->SetPosition(glm::vec3(10.f, 0.f, 0.f));
-	particle2->SetPosition(glm::vec3(3.f, 0.f, 0.f));
+	particle1->SetPosition(glm::vec3(3.5f, -3.f, 0.f));
+	particle2->SetPosition(particle1->GetPosition() - glm::vec3(7.f, 0.f, 0.f));
 
 	engine.AddObject(&particle1);
 	engine.AddObject(&particle2);
@@ -236,19 +237,19 @@ int main()
 
 	// CHAIN OF CYLINDERS
 
-	const int numCylinders = 20;
-	const int numSprings = numCylinders - 1;
+	constexpr int numCylinders = 10;
+	constexpr int numSprings = numCylinders - 1;
 
 	GameRigidBody rigids[numCylinders];
 	GameApplicationPoint appPoints[numSprings*2];
 	
 	float cylinderHeight = 0.5f;
-	glm::vec3 dir = glm::vec3(0.f, cylinderHeight, 0.f);
+	glm::vec3 dir = glm::vec3(0.f, -cylinderHeight, 0.f);
 	
 	for (int i = 0; i < numCylinders; ++i)
 	{
 		rigids[i] = CreateGameCylinder(10.f, 0.2f, cylinderHeight);
-		rigids[i]->SetPosition(glm::vec3(0.f, 0.f, 0.f) + dir * (float)i);
+		rigids[i]->SetPosition(glm::vec3(-5.f, 5.f, 0.f) + dir * (float)i);
 		rigids[i]->SetDamping(1.f);
 		rigids[i]->SetAngularDamping(1.f);
 		engine.AddObject(&rigids[i]);
@@ -267,6 +268,21 @@ int main()
 		springs[i]->SetDamping(springs[i]->GetConstant() / 50.f);
 		engine.AddObject(&springs[i]);
 	}
+
+	GameRigidBody& topRigid = rigids[0];
+	GameParticle topParticle(0.2f, 1.f);
+	topParticle->fixed = true;
+	glm::vec3 perturbation = glm::vec3(
+		((float)rand() / (float)RAND_MAX - 0.5f) * 0.1f,
+		((float)rand() / (float)RAND_MAX - 0.5f) * 0.1f,
+		((float)rand() / (float)RAND_MAX - 0.5f) * 0.1f
+	);
+	topParticle->SetPosition(topRigid->GetPosition() + dir * 0.5f + perturbation);
+	engine.AddObject(&topParticle);
+	GameApplicationPoint topAppPoint(topRigid, topRigid->GetPosition() - dir * 0.5f, 0.1f);
+	GameSpring topSpring(topParticle, topAppPoint, 2000.f, 0.f);
+	topSpring->SetDamping(topSpring->GetConstant() / 50.f);
+	engine.AddObject(&topSpring);
 
 
 	// ############ MAIN LOOP ############
@@ -323,8 +339,8 @@ int main()
 		shaderProgram.SetUniformVec3(camera.Position, "camPos");
 
 		engine.Render(camFrustum, shaderProgram, "model");
-		DrawRigidBody(*tHandlePhysics, shaderProgram, "model");
-		DrawRigidBody(*mobilePhone.GetPhysics(), shaderProgram, "model");
+		//DrawRigidBody(*tHandlePhysics, shaderProgram, "model");
+		//DrawRigidBody(*mobilePhone.GetPhysics(), shaderProgram, "model");
 
 		cursor.renderCursor(shaderProgram, "model");
 

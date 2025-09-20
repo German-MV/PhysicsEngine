@@ -48,4 +48,4 @@ public:
 	}
 };
 
-GameRigidBody& MergeRigidBodies(GameRigidBody& a, GameRigidBody& b);
+GameRigidBody MergeRigidBodies(GameRigidBody& a, GameRigidBody& b);

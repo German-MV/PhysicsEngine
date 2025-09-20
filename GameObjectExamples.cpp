@@ -39,7 +39,6 @@ GameRigidBody CreateTHandleExample()
 	//RigidBody tHandle = CreateTHandle(mass, cylinderLength1, cylinderLength2, radius1, radius2);
 	GameRigidBody tHandle(RigidBody(CreateTHandle(m, L, R)));
 	//tHandle.orientation = glm::angleAxis(glm::radians(90.f), glm::vec3(0.f, 0.f, 1.f));
-	tHandle->SetPosition(glm::vec3(0.f, 5.f, 0.f));
 
 	glm::vec3 angularVelocity = 10.f * glm::vec3(1.f, 0.f, 0.f);
 	glm::vec3 perturbation = glm::vec3(0.01f);

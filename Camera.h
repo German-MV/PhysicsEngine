@@ -21,8 +21,8 @@ public:
 
 	bool firstClick = true;
 
-	int width;
-	int height;
+	unsigned int& width;
+	unsigned int& height;
 
 	float speed = 20.f;
 	float sensitivity = 100.0f;
@@ -31,7 +31,7 @@ public:
 	float nearPlane = 0.1f;
 	float farPlane = 100.f;
 
-	Camera(int width, int height, glm::vec3 position);
+	Camera(unsigned int& width, unsigned int& height, glm::vec3 position);
 
 	void updateMatrix();
 	void Matrix(Shader& shader, const char* uniform);

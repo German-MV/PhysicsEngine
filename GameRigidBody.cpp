@@ -1,6 +1,6 @@
 #include "GameRigidBody.h"
 
-GameRigidBody& MergeRigidBodies(GameRigidBody& a, GameRigidBody& b)
+GameRigidBody MergeRigidBodies(GameRigidBody& a, GameRigidBody& b)
 {
 	RigidBody* mergedRigids = new RigidBody(MergeRigidBodies(*a.GetPhysics(), *b.GetPhysics()));
 

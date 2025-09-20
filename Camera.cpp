@@ -1,11 +1,8 @@
 #include "Camera.h"
 
-Camera::Camera(int width, int height, glm::vec3 position)
-{
-	Camera::width = width;
-	Camera::height = height;
-	Position = position;
-}
+Camera::Camera(unsigned int& width, unsigned int& height, glm::vec3 position) : 
+	width(width), height(height), Position(position)
+{}
 
 void Camera::updateMatrix()
 {
